@@ -5,13 +5,9 @@ import { Button } from './components/ColorButton';
 
 function App() {
   const [colors, setColors] = useState([]);
-  const [lastClicked, setLastClicked] = useState('');
   const buttonCount = 4;
 
   const generateHexColor = (index) => {
-    if (lastClicked === index) {
-      return;
-    }
 
     const hexColor = `#${Math.random().toString(16).slice(2, 8)}`;
     const backgroundHexColor = `#${Math.random().toString(16).slice(2, 8)}`;
@@ -19,7 +15,6 @@ function App() {
 
     colorArr[index] = hexColor;
     setColors(colorArr);
-    setLastClicked(index);
     document.body.style.backgroundColor = backgroundHexColor;
   };
 
