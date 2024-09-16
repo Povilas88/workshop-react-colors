@@ -8,7 +8,6 @@ function App() {
   const buttonCount = 4;
 
   const generateHexColor = (index) => {
-
     const hexColor = `#${Math.random().toString(16).slice(2, 8)}`;
     const backgroundHexColor = `#${Math.random().toString(16).slice(2, 8)}`;
     const colorArr = [...colors];
